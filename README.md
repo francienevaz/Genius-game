@@ -1,2 +1,2 @@
-# genesis-game
+# genius-game
 Joguinho 
