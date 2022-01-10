@@ -106,12 +106,16 @@ let playGame = () => {
 
 
 //eventos click para as cores
+
 green.onclick = () => click(0);
 red.onclick = () => click(1);
 yellow.onclick = () => click(2);
 blue.onclick = () => click(3);
 
-
+/*green.addEventListener('onclick', click(0));
+red.addEventListener('onclick', click(1));
+yellow.addEventListener('onclick', click(2));
+blue.addEventListener('onclick', click(3));*/
 
 //Inicio do jogo
 
