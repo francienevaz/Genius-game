@@ -12,22 +12,27 @@ const red = document.querySelector('.red');
 const green = document.querySelector('.green');
 const yellow = document.querySelector('.yellow');
 
+
+//aleatoriedade de cores
+
 let shuffleOrder = () => {
-    let colorOrder = Math.floor(math.random()*4);
+    let colorOrder = Math.floor(Math.random()*4);
     order[order.length] = colorOrder;
     clickedOrder = [];
 
     for(let i in order) {
         let elementColor = createElement(order[i]);
-        lightColor(elementColor, Number(i+1));
+        lightColor(elementColor, Number(i) + 1);
     }
 }
 
+//acende a próxima cor
+
 let lightColor = (element, number) => {
-    number = time* 500;
+    number = number * 500;
     setTimeout(() => {
         element.classList.add('selected');
-    }, tempo - 250);
+    }, number - 250);
     setTimeout(() => {
         element.classList.remove('selected');
     });
@@ -46,6 +51,8 @@ let checkOrder = () => {
     }
 }
 
+//clique do usuário
+
 let click = (color) => {
     clickedOrder[clickedOrder.length] = color;
     createColorElement(color).classList.add('selected');
@@ -58,6 +65,8 @@ let click = (color) => {
 
     
 }
+
+//função que retorna a cor
 
 let createColorElement = (color) => {
     if(color == 0) {
@@ -76,6 +85,8 @@ let nextLevel = () => {
     shuffleOrder();
 }
 
+//Game Over
+
 let gameOver = () => {
     alert(`Pontuação: ${score}! \n Você perdeu o jogo! Clique em OK para iniciar um novo jogo!`)
     order = [];
@@ -83,6 +94,8 @@ let gameOver = () => {
 
     playGame();
 }
+
+//Inicio de jogo
 
 let playGame = () => {
     alert(`Bem vindo ao Genius! Iniciando novo jogo!`)
@@ -99,5 +112,7 @@ yellow.onclick = () => click(2);
 blue.onclick = () => click(3);
 
 
+
+//Inicio do jogo
 
 playGame();
