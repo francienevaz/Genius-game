@@ -12,7 +12,6 @@ const red = document.querySelector('.red');
 const green = document.querySelector('.green');
 const yellow = document.querySelector('.yellow');
 
-
 //aleatoriedade de cores
 
 let shuffleOrder = () => {
@@ -46,7 +45,7 @@ let checkOrder = () => {
         }
     }
     if(clickedOrder.length == order.length) {
-        alert(`Pontuação ${score} \n Você acertou! Iniciando próximo nível`);
+        // alert(`Pontuação ${score} \n Você acertou! Iniciando próximo nível`);
         nextLevel();
     }
 }
@@ -62,7 +61,6 @@ let click = (color) => {
 
         checkOrder();
     }, 250);
-
     
 }
 
@@ -103,7 +101,6 @@ let playGame = () => {
 
     nextLevel();
 }
-
 
 //eventos click para as cores
 
