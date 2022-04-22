@@ -15,8 +15,8 @@ body {
 .genius {
     display: grid;
     grid-template-areas: "verde vermelho" "amarelo azul";
-    grid-gap: 10px;
-    border: 15px groove #140707;
+    grid-gap: 15px;
+    border: 20px groove #140707;
     background-color: #0c0404;
     border-radius: 100%;
     width: 500px;
@@ -48,5 +48,9 @@ body {
 }
 
 .selected {
-    opacity: 0.5;
+    box-shadow: inset 0 0 10px rgb(255, 255, 255), 0 0 70px rgb(248, 247, 152);
+    opacity: 0.9;
+    
+    cursor: pointer;
+    transition: .3s ease all;
 }
